@@ -3,7 +3,9 @@
   margin: auto;
   padding: 0.3rem;
 }
-
+.galery img {
+  width: 100%;
+}
 .food-description {
   font-family: var(--f-a);
   font-size: 1rem;
@@ -11,4 +13,15 @@
 .food {
   font-family: var(--f-b), serif;
   color: var(--c-s);
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-container .galery {
+  flex-basis: calc(33.33% - 1rem);
+  margin: 0.5rem;
 }

@@ -24,6 +24,11 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  max-width: 80%;
+  max-width: 1200px;
+  padding: 1rem 0;
   margin: auto;
+}
+
+.selected {
+  text-decoration: 9px solid var(--c-s) underline;
 }

@@ -5,7 +5,6 @@
 }
 .navbar {
   width: 100%;
-
   justify-content: space-between;
   margin: auto;
   padding: 1.4em;
@@ -21,6 +20,7 @@
 }
 .app-logo,
 .navbar-list a {
+  max-width: 1200px;
   color: var(--c-s);
 }
 .navbarElement a {
