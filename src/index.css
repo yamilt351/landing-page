@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&family=Open+Sans:wght@300;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+
+:root {
+  /* fonts */
+  --f-b: 'Cormorant Upright', serif;
+  --f-a: 'Open Sans', serif;
+  /* colors */
+  /* blak */
+  --c-m: #0c0c0c;
+  /* gold */
+  --c-s: #dcca87;
+  /* grey */
+  --c-t: #f5efdb;
+  /* white */
+  --c-q: #fff;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+button {
+  margin-top: 1rem;
+  border: 0.1rem solid transparent;
+  padding: 1rem;
+  color: var(--c-m);
+  background-color: var(--c-s);
+}
+button:hover {
+  border: 0.1rem solid var(--c-s);
+  background-color: transparent;
+  color: var(--c-s);
+  cursor: pointer;
+}
