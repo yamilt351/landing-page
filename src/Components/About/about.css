@@ -3,7 +3,6 @@
   margin: 0;
   text-align: center;
   justify-content: center;
-  background-color: #000;
   padding: 1rem;
 }
 .maps {
@@ -22,7 +21,6 @@
 }
 .about-container p {
   margin: 1.3rem;
-  /* width: 100%; */
   font-family: var(--f-s), serif;
   color: var(--c-q);
 }

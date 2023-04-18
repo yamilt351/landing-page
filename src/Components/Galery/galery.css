@@ -1,10 +1,16 @@
 .galery {
-  max-width: 20rem;
-  margin: auto;
+  max-width: 33%;
+  /* margin: auto; */
   padding: 0.3rem;
 }
 .galery img {
   width: 100%;
+  border: 2px solid var(--c-s);
+  opacity: 0.7;
+}
+.galery img:hover {
+transition: ease-in-out 0.4s;
+  opacity: 1;
 }
 .food-description {
   font-family: var(--f-a);
