@@ -5,30 +5,35 @@ function Product() {
   const [wines, setWines] = useState(false);
   const [pizza, setPizza] = useState(true);
   const [reviews, setReviews] = useState(false);
+
+  const changeStateWines = () => {
+    setWines(true);
+    setPizza(false);
+    setReviews(false);
+  };
+  const changeStatePizza = () => {
+    setWines(false);
+    setPizza(true);
+    setReviews(false);
+  };
+  const changeStateReviews = () => {
+    setWines(false);
+    setPizza(false);
+    setReviews(true);
+  };
+
   return (
     <section className="product-section" id="Product">
       <div className="title-container">
-        <h1
-          className={pizza ? 'selected' : 'hide'}
-          onClick={() => {
-            !setPizza;
-          }}
-        >
+        <h1 className={pizza ? 'selected' : 'hide'} onClick={changeStatePizza}>
           Pizzas
         </h1>
-        <h1
-          className={wines ? 'selected' : 'hide'}
-          onClick={() => {
-            !setWines;
-          }}
-        >
+        <h1 className={wines ? 'selected' : 'hide'} onClick={changeStateWines}>
           Wines
         </h1>
         <h1
           className={reviews ? 'selected' : 'hide'}
-          onClick={() => {
-            !setReviews;
-          }}
+          onClick={changeStateReviews}
         >
           Reviews
         </h1>
