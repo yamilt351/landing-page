@@ -1,0 +1,14 @@
+.galery {
+  max-width: 20rem;
+  margin: auto;
+  padding: 0.3rem;
+}
+
+.food-description {
+  font-family: var(--f-a);
+  font-size: 1rem;
+}
+.food {
+  font-family: var(--f-b), serif;
+  color: var(--c-s);
+}
