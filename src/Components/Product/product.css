@@ -31,12 +31,12 @@
 }
 
 @media screen and (max-width: 800px) {
-  .product-container {
-    display: block;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem 0;
-    margin: auto;
+  .title-container {
+    margin: 1rem 0rem;
+    font-size: 1.2rem;
+  }
+  .title-container h1 {
+    margin: 2rem 1rem;
+    border-bottom: 1px solid transparent;
   }
 }
