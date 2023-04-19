@@ -1,8 +1,8 @@
 .section {
   background-color: #111;
   height: 100%;
-  width: 100vw;
-  /* padding: 1rem 0; */
+  width: 100%;
+
 }
 .section-container {
   display: flex;
@@ -39,7 +39,7 @@
   }
   .image-container {
     overflow-x: hidden;
-    width: 30rem;
+    width: 100%;
     height: 30rem;
   }
   .piza {

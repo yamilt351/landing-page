@@ -6,11 +6,10 @@
   padding: 1rem;
 }
 .maps {
-  max-width: 1200px
+  max-width: 1200px;
 }
 .about-container {
-  /* margin: 1.3rem; */
-  max-width:1200px;
+  max-width: 1200px;
 }
 .about-container h2 {
   font-size: 2rem;
@@ -23,4 +22,12 @@
   margin: 1.3rem;
   font-family: var(--f-s), serif;
   color: var(--c-q);
+}
+
+@media screen and (max-width: 800px) {
+  .about-container,
+  .maps {
+    /* margin: 1.3rem; */
+    width: 100%;
+  }
 }

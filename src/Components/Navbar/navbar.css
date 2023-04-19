@@ -65,8 +65,9 @@
   .navbar {
     position: absolute;
     z-index: 2;
+     width: 100%;
     justify-content: center;
-    padding: 2.3rem;
+    padding: 2.3rem 0rem;
   }
   .navbar-list {
     display: flex;
