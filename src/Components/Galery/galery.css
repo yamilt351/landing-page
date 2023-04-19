@@ -9,7 +9,7 @@
   opacity: 0.7;
 }
 .galery img:hover {
-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
   opacity: 1;
 }
 .food-description {
@@ -30,4 +30,14 @@ transition: ease-in-out 0.4s;
 .gallery-container .galery {
   flex-basis: calc(33.33% - 1rem);
   margin: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery-container {
+    display: block;
+  }
+  .galery {
+margin: auto;
+    max-width: 100%;
+  }
 }

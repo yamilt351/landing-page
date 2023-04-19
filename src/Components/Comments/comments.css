@@ -40,8 +40,7 @@
     display: block;
   }
   .user-comments {
-    width: 90%;
-    margin: auto;
-    padding: 0.3rem;
+    width: 100%;
+    margin: 1rem 2%;
   }
 }
