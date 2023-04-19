@@ -7,8 +7,8 @@ function Modal({ isOpen, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="modal">
+        <button onClick={onClose} className='close-button'>X</button>
         <h2>Sign In</h2>
-        <button onClick={onClose}>X</button>
         <form>
           <label>
             <input type="text" name="username" placeholder="Username" />

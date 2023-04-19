@@ -33,8 +33,20 @@
   color: var(--c-s);
 }
 
-.modal input :focus {
-  border: none;
-  border-bottom: 1px solid var(--c-s);
+.modal input:focus {
+  outline: none;
+}
+.close-button {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
   color: var(--c-s);
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -0.5rem;
+  left: 0.3rem;
 }
