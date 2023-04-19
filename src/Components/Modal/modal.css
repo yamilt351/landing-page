@@ -14,7 +14,6 @@
   z-index: 4;
   width: 500px;
   height: 500px;
-  border-radius: 1rem;
   border: 0.3rem solid var(--c-s);
   top: 50%;
   left: 50%;
@@ -40,14 +39,13 @@
   width: 2rem;
   height: 2rem;
   font-size: 1.5rem;
-  border-radius: 50%;
   display: flex;
-  color: var(--c-s);
-  background-color: transparent;
+  color: var(--c-m);
+  background-color:var(--c-s);
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -0.5rem;
+  top: -0.6rem;
   left: 0.3rem;
 }
 .auth-button {
