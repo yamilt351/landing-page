@@ -15,7 +15,15 @@ function Modal({ isOpen, onClose }) {
         <h2>{signin ? 'Sign In !' : 'Sign Up !'}</h2>
         <form>
           <label>
-            <input type="text" name="username" placeholder="E-mail" />
+            <input type="text" name="email" placeholder="E-mail" />
+          </label>
+          <label>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              className={signin ? 'hide' : ''}
+            />
           </label>
           <label>
             <input type="password" name="password" placeholder="Password" />
@@ -27,7 +35,8 @@ function Modal({ isOpen, onClose }) {
             type="submit"
             className="auth-button"
             onClick={(e) => {
-              e.preventDefault(), setSignin(!signin);
+              e.preventDefault();
+              setSignin(!signin);
             }}
           >
             {signin ? 'Create Account' : 'I already have an Account'}

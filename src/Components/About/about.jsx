@@ -1,5 +1,4 @@
 import React from 'react';
-import maps from '../images/Google-Maps.png';
 import './about.css';
 function About() {
   return (

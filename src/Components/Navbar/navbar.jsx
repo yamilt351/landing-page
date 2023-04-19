@@ -18,39 +18,41 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="menu-display">
-        <button
-          onClick={() => {
-            setShowLinks(!showlinks);
-          }}
+      <div className="navbar-container-elements">
+        <div className="menu-display">
+          <button
+            onClick={() => {
+              setShowLinks(!showlinks);
+            }}
+          >
+            <MdMenu />
+          </button>
+        </div>
+        <div className="app-logo">
+          <img src="" alt="app_logo_here" />
+        </div>
+        <ul
+          className={`${
+            showlinks ? 'navbar-list show-container' : 'navbar-list'
+          }`}
         >
-          <MdMenu />
-        </button>
+          {data.map((value) => {
+            const { id, name, link } = value;
+            return (
+              <li className="navbarElement" key={id}>
+                {link === '#Auth' ? (
+                  <a href="#" onClick={handleModalOpen}>
+                    {name}
+                  </a>
+                ) : (
+                  <a href={link}>{name}</a>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+        <Modal isOpen={isModalOpen} onClose={handleModalClose} />
       </div>
-      <div className="app-logo">
-        <img src="" alt="app_logo_here" />
-      </div>
-      <ul
-        className={`${
-          showlinks ? 'navbar-list show-container' : 'navbar-list'
-        }`}
-      >
-        {data.map((value) => {
-          const { id, name, link } = value;
-          return (
-            <li className="navbarElement" key={id}>
-              {link === '#Auth' ? (
-                <a href="#" onClick={handleModalOpen}>
-                  {name}
-                </a>
-              ) : (
-                <a href={link}>{name}</a>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-      <Modal isOpen={isModalOpen} onClose={handleModalClose} />
     </nav>
   );
 }

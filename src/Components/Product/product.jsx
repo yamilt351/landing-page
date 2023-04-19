@@ -25,14 +25,14 @@ function Product() {
   return (
     <section className="product-section" id="Product">
       <div className="title-container">
-        <h1 className={pizza ? 'selected' : 'hide'} onClick={changeStatePizza}>
+        <h1 className={pizza ? 'selected' : ''} onClick={changeStatePizza}>
           Pizzas
         </h1>
-        <h1 className={wines ? 'selected' : 'hide'} onClick={changeStateWines}>
+        <h1 className={wines ? 'selected' : ''} onClick={changeStateWines}>
           Wines
         </h1>
         <h1
-          className={reviews ? 'selected' : 'hide'}
+          className={reviews ? 'selected' : ''}
           onClick={changeStateReviews}
         >
           Reviews

@@ -4,15 +4,20 @@
   align-items: center;
 }
 .navbar {
-  /* width: 100%; */
+  position: fixed;
+z-index: 10;
+  width: 100%;
   font-family: var(--f-b);
   font-size: 1.3rem;
-  max-width: 1200px;
+  background-color: var(--c-m);
+  border: 2px solid var(--c-m);
+}
+.navbar-container-elements {
+  display: flex;
   justify-content: space-between;
   margin: auto;
   padding: 1.4em;
-  background-color: var(--c-m);
-  border: 2px solid var(--c-m);
+  max-width: 1200px;
 }
 .navbar-list {
   justify-content: center;
@@ -23,7 +28,6 @@
 }
 .app-logo,
 .navbar-list a {
-
   color: var(--c-s);
 }
 .navbarElement a {
@@ -65,7 +69,7 @@
   .navbar {
     position: absolute;
     z-index: 2;
-     width: 100%;
+    width: 100%;
     justify-content: center;
     padding: 2.3rem 0rem;
   }
