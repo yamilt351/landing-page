@@ -2,7 +2,11 @@
   background-color: #111;
   height: 100%;
   width: 100%;
-
+  animation-name: moveInLeft;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
 }
 .section-container {
   display: flex;
@@ -52,5 +56,20 @@
   }
   .text-container {
     margin-top: 3rem;
+  }
+}
+
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

@@ -48,7 +48,6 @@ footer {
 }
 .social-media a:hover {
   color: var(--c-s);
-  text-decoration: 2px var(--c-s) underline;
 }
 .location {
   text-align: center;

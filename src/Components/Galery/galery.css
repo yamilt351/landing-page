@@ -5,13 +5,17 @@
 }
 .galery img {
   width: 100%;
-  border: 2px solid var(--c-s);
-  opacity: 0.7;
+  border: 2px solid transparent;
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out;
 }
 .galery img:hover {
+  border: 2px solid var(--c-s);
+  transform: scale(1.01);
   transition: ease-in-out 0.4s;
   opacity: 1;
 }
+
 .food-description {
   font-family: var(--f-a);
   font-size: 1rem;
@@ -19,8 +23,8 @@
 .food {
   font-family: var(--f-b), serif;
   color: var(--c-s);
-font-size: 1.5rem;
-text-transform: capitalize;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 .gallery-container {

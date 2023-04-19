@@ -2,9 +2,19 @@ import React, { useState } from 'react';
 import './navbar.css';
 import data from './data';
 import { MdMenu } from 'react-icons/md';
+import Modal from '../Modal/modal';
 
 function Navbar() {
   const [showlinks, setShowLinks] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -29,11 +39,18 @@ function Navbar() {
           const { id, name, link } = value;
           return (
             <li className="navbarElement" key={id}>
-              <a href={link}>{name}</a>
+              {link === '#Auth' ? (
+                <a href="#" onClick={handleModalOpen}>
+                  {name}
+                </a>
+              ) : (
+                <a href={link}>{name}</a>
+              )}
             </li>
           );
         })}
       </ul>
+      <Modal isOpen={isModalOpen} onClose={handleModalClose} />
     </nav>
   );
 }

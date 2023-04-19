@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 :root {
   /* fonts */
   --f-b: 'Cormorant Upright', serif;
@@ -38,6 +37,7 @@ button {
 }
 button:hover {
   border: 0.1rem solid var(--c-s);
+  transition: ease-in-out 0.3s;
   background-color: transparent;
   color: var(--c-s);
   cursor: pointer;
