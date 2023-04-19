@@ -7,7 +7,18 @@ function About() {
       <div className="about-container">
         <h2>About Us</h2>
 
-        <img src={maps} alt="google maps view" className="maps" />
+        <iframe
+          width="425"
+          height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1054215431213379%2C51.497990292603085%2C-0.09351253509521486%2C51.502004286184594&amp;layer=mapnik&amp;marker=51.499997333585014%2C-0.09946703910827637"
+          style={{ border: '1px solid black' }}
+        ></iframe>
+        <br />
+        <small>
+          <a href="https://www.openstreetmap.org/?mlat=51.50000&amp;mlon=-0.09947#map=17/51.50000/-0.09947">
+            View Larger Map
+          </a>
+        </small>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in
           voluptatem temporibus totam quidem voluptatum laudantium

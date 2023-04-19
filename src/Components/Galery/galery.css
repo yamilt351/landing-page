@@ -19,6 +19,8 @@
 .food {
   font-family: var(--f-b), serif;
   color: var(--c-s);
+font-size: 1.5rem;
+text-transform: capitalize;
 }
 
 .gallery-container {
@@ -31,13 +33,23 @@
   flex-basis: calc(33.33% - 1rem);
   margin: 0.5rem;
 }
-
+.product-and-price-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.text-container {
+  max-height: 20rem;
+}
 @media screen and (max-width: 800px) {
   .gallery-container {
     display: block;
   }
   .galery {
-margin: auto;
+    margin: auto;
     max-width: 100%;
   }
 }

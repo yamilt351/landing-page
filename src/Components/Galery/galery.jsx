@@ -8,12 +8,15 @@ function Galery({ pizza, wine, comment }) {
 
   if (pizza) {
     galleryItems = food.map((foods) => {
-      const { id, description, img, dish } = foods;
+      const { id, description, img, dish, price } = foods;
       return (
         <div className="galery" key={id}>
           <img src={img} alt={description} />
           <div className="text-container">
-            <h3 className="food">{dish}</h3>
+            <div className="product-and-price-container">
+              <h3 className="food">{dish}</h3>
+              <h3 className="food">{price}</h3>
+            </div>
             <p className="food-description">{description}</p>
           </div>
         </div>
@@ -21,12 +24,15 @@ function Galery({ pizza, wine, comment }) {
     });
   } else if (wine) {
     galleryItems = wines.map((wine) => {
-      const { id, description, img, dish } = wine;
+      const { id, description, img, dish, price } = wine;
       return (
         <div className="galery" key={id}>
           <img src={img} alt={description} />
           <div className="text-container">
-            <h3 className="food">{dish}</h3>
+            <div className="product-and-price-container">
+              <h3 className="food">{dish}</h3>
+              <h3 className="food">{price}</h3>
+            </div>
             <p className="food-description">{description}</p>
           </div>
         </div>

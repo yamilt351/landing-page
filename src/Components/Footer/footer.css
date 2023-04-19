@@ -6,7 +6,7 @@ footer {
   display: flex;
   align-items: center;
   margin: auto;
-  /* justify-content: space-between; */
+  justify-content: flex-start;
   padding: 1rem 0;
   height: 20rem;
   background-color: var(--c-m);
@@ -31,17 +31,19 @@ footer {
   font-family: var(--f-b);
   font-size: 2rem;
   color: var(--c-s);
-  text-decoration: 2px var(--c-s) underline;
 }
 
 .contact li,
-.location p,
 .schedule li,
 .social-media li {
-  align-items: center;
   margin: auto 1rem 0.8rem 1rem;
 }
+.location p{
+  margin: auto 1rem;
+}
 .social-media a {
+  display: flex;
+  justify-content: start;
   color: var(--c-q);
 }
 .social-media a:hover {

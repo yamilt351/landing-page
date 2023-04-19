@@ -7,6 +7,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$500',
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$50000',
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$5000000',
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$10000000',
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$56000',
   },
   {
     id: 6,
@@ -42,6 +47,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$5500000000',
   },
   {
     id: 7,
@@ -49,6 +55,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$10006000',
   },
   {
     id: 9,
@@ -56,6 +63,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$4000',
   },
   {
     id: 8,
@@ -63,6 +71,7 @@ export const wines = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
+    price: '$10',
   },
 ];
 
@@ -73,6 +82,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$200',
   },
   {
     id: 2,
@@ -80,6 +90,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$220',
   },
   {
     id: 3,
@@ -87,6 +98,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$250',
   },
   {
     id: 4,
@@ -94,6 +106,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$290',
   },
   {
     id: 5,
@@ -101,6 +114,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$240',
   },
   {
     id: 6,
@@ -108,6 +122,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$210',
   },
   {
     id: 7,
@@ -115,6 +130,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$230',
   },
   {
     id: 9,
@@ -122,6 +138,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$223',
   },
   {
     id: 8,
@@ -129,5 +146,6 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
+    price: '$1321234',
   },
 ];
