@@ -40,7 +40,7 @@ function Product() {
       </div>
       <div className="product-container">
         <div className="gallery-container">
-          <Galery pizza={pizza} wine={wines} />
+          <Galery pizza={pizza} wine={wines} comment={reviews} />
         </div>
       </div>
     </section>

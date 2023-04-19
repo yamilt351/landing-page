@@ -1,6 +1,6 @@
 .galery {
   max-width: 33%;
-  /* margin: auto; */
+  margin: auto;
   padding: 0.3rem;
 }
 .galery img {

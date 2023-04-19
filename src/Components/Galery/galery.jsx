@@ -1,8 +1,9 @@
 import React from 'react';
 import './galery.css';
 import { wines, food } from './data';
+import Comments from '../Comments/comments';
 
-function Galery({ pizza, wine }) {
+function Galery({ pizza, wine, comment }) {
   let galleryItems = null;
 
   if (pizza) {
@@ -31,6 +32,12 @@ function Galery({ pizza, wine }) {
         </div>
       );
     });
+  } else if (comment) {
+    return (
+      <div className="gallery-container">
+        <Comments />
+      </div>
+    );
   }
 
   return <div className="gallery-container">{galleryItems}</div>;

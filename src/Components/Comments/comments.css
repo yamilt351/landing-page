@@ -1,0 +1,25 @@
+.content-comments{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.user-comments {
+  width: 33%;
+  margin: auto;
+  padding: 0.3rem;
+}
+
+.name-and-photo-container img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.name-and-photo-container h3 {
+  font-family: var(--f-b), serif;
+  font-size: 1.2rem;
+  color: var(--c-s);
+}
+.comment-container p {
+  color: var(--c-q);
+  font-family: var(--f-s), serif;
+}
