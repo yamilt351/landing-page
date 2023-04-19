@@ -11,12 +11,10 @@ function Modal({ isOpen, onClose }) {
         <button onClick={onClose}>X</button>
         <form>
           <label>
-            User:
-            <input type="text" name="username" />
+            <input type="text" name="username" placeholder="Username" />
           </label>
           <label>
-            Password:
-            <input type="password" name="password" />
+            <input type="password" name="password" placeholder="Password" />
           </label>
           <button type="submit">Sign In</button>
         </form>

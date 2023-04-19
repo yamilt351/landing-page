@@ -1,0 +1,40 @@
+.modal-overlay,
+.modal,
+.modal form {
+  justify-content: center;
+  align-items: center;
+}
+.modal,
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-overlay {
+  position: fixed;
+  z-index: 4;
+  width: 500px;
+  height: 500px;
+  border-radius: 1rem;
+  border: 0.3rem solid var(--c-s);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.modal {
+  color: white;
+}
+
+.modal input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--c-s);
+  color: var(--c-s);
+}
+
+.modal input :focus {
+  border: none;
+  border-bottom: 1px solid var(--c-s);
+  color: var(--c-s);
+}

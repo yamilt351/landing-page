@@ -1,10 +1,4 @@
-.about-section {
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-}
+
 .about-section,
 .map-and-description-container {
   display: flex;
@@ -53,16 +47,3 @@
   }
 }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
