@@ -1,10 +1,10 @@
-.content-comments{
+.content-comments {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .user-comments {
-  width: 33%;
+  width: 30%;
   margin: auto;
   padding: 0.3rem;
 }
@@ -22,4 +22,26 @@
 .comment-container p {
   color: var(--c-q);
   font-family: var(--f-s), serif;
+}
+
+.stars {
+  color: var(--c-s);
+  align-items: flex-start;
+}
+
+.photo-score-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+  .content-comments {
+    display: block;
+  }
+  .user-comments {
+    width: 90%;
+    margin: auto;
+    padding: 0.3rem;
+  }
 }

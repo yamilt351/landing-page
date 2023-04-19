@@ -7,7 +7,7 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 1,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 2,
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 3,
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 4,
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 3,
   },
   {
     id: 9,
@@ -63,7 +63,7 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 4,
   },
   {
     id: 10,
@@ -71,6 +71,6 @@ export const comment = [
     description:
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
-    score: 5,
+    score: 1,
   },
 ];
