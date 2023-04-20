@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../Context/cartContext.jsx';
+
 import './cart.css';
+
 function ShoppingCart({ onCartClose }) {
-  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useContext(CartContext);
 
-  const removeProduct = (id) => {
-    const updatedProducts = products.filter((product) => product.id !== id);
-    setProducts(updatedProducts);
-  };
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
 
-  const total = products.reduce((acc, curr) => acc + curr.price, 0);
+  const totalPrice = cart.reduce(
+    (acc, curr) => acc + curr.quantity * curr.price,
+    0,
+  );
 
   return (
     <div className="cart-section">
@@ -21,18 +26,11 @@ function ShoppingCart({ onCartClose }) {
       <div className="cart-items-container">
         <div className="cart-items">
           <ul className="cart-links">
-            {products.map((product) => (
-              <li key={product.id}>
-                <p>{product.dish}</p>
-                <p>{product.price}</p>
-                <button onClick={() => removeProduct(product.id)}>
-                  Remove
-                </button>
-              </li>
-            ))}
+            <div>Items in cart: {quantity}</div>
+            <div>Total: ${totalPrice}</div>
+            <button onClick={() => console.log(cart)}>Checkout</button>
           </ul>
         </div>
-        <p>Total: {total}</p>
       </div>
     </div>
   );

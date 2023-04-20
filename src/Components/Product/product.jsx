@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Galery from '../Galery/galery';
+import Galery from '../Galery/galery.jsx';
 import './product.css';
 function Product() {
   const [wines, setWines] = useState(false);

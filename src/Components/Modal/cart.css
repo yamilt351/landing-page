@@ -20,6 +20,6 @@
 .cart-title,
 .cart-links,
 .cart-links li,
-.cart-items-container p {
+.cart-items-container span {
   color: var(--c-s);
 }

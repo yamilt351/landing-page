@@ -77,7 +77,7 @@ export const wines = [
 
 export const food = [
   {
-    id: 1,
+    id: 10,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -85,7 +85,7 @@ export const food = [
     price: '$200',
   },
   {
-    id: 2,
+    id: 20,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -93,7 +93,7 @@ export const food = [
     price: '$220',
   },
   {
-    id: 3,
+    id: 30,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -101,7 +101,7 @@ export const food = [
     price: '$250',
   },
   {
-    id: 4,
+    id: 40,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -109,7 +109,7 @@ export const food = [
     price: '$290',
   },
   {
-    id: 5,
+    id: 50,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -117,7 +117,7 @@ export const food = [
     price: '$240',
   },
   {
-    id: 6,
+    id: 60,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -125,7 +125,7 @@ export const food = [
     price: '$210',
   },
   {
-    id: 7,
+    id: 70,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -133,7 +133,7 @@ export const food = [
     price: '$230',
   },
   {
-    id: 9,
+    id: 90,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
@@ -141,7 +141,7 @@ export const food = [
     price: '$223',
   },
   {
-    id: 8,
+    id: 80,
     dish: 'pizza',
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',

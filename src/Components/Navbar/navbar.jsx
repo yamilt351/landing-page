@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './navbar.css';
 import data from './data';
 import { MdMenu } from 'react-icons/md';
 import Modal from '../Modal/modal';
+import { CartContext } from '../Context/cartContext';
 
 function Navbar() {
   const [showlinks, setShowLinks] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+
+  const [cart, setCart] = useContext(CartContext);
+
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -73,6 +80,7 @@ function Navbar() {
                     }
                   >
                     {name}
+                    {quantity}
                   </a>
                 ) : (
                   <a

@@ -1,15 +1,50 @@
-import React, { useState } from 'react';
+import React, { useContext} from 'react';
 import './galery.css';
 import { wines, food } from './data';
 import Comments from '../Comments/comments';
 import { FaPizzaSlice, FaWineGlass } from 'react-icons/fa';
-
+import { CartContext } from '../Context/cartContext.jsx';
 
 function Galery({ pizza, wine, comment }) {
-  const [cartProducts, setCartProducts] = useState([]);
+  const [cart, setCart] = useContext(CartContext);
 
-  const addToCart = (product) => {
-    setCartProducts([...cartProducts, product]);
+  const addToCart = (id, price) => {
+    setCart((currItems) => {
+      const isItemsFound = currItems.find((item) => item.id === id);
+      if (isItemsFound) {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [...currItems, { id, quantity: 1, price }];
+      }
+    });
+  };
+
+  const removeItem = (id) => {
+    setCart((currItems) => {
+      const foundItem = currItems.find((item) => item.id === id);
+      if (foundItem && foundItem.quantity === 1) {
+        return currItems.filter((item) => item.id !== id);
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  };
+
+  const getQuantityById = (id) => {
+    const foundItem = cart.find((item) => item.id === id);
+    return foundItem ? foundItem.quantity : 0;
   };
 
   let galleryItems = null;
@@ -17,8 +52,10 @@ function Galery({ pizza, wine, comment }) {
   if (pizza) {
     galleryItems = food.map((foods) => {
       const { id, description, img, dish, price } = foods;
+
+      const quantityPerItem = getQuantityById(id);
       return (
-        <div className="galery" key={id} onClick={() => addToCart(foods)}>
+        <div className="galery" key={id}>
           <img src={img} alt={description} />
           <div className="text-container">
             <div className="product-and-price-container">
@@ -28,6 +65,8 @@ function Galery({ pizza, wine, comment }) {
               <h3 className="food">{price}</h3>
             </div>
             <p className="food-description">{description}</p>
+            <button onClick={() => addToCart(id, price)}>+{quantityPerItem}</button>
+            <button onClick={() => removeItem(id)}>-</button>
           </div>
         </div>
       );
@@ -36,7 +75,7 @@ function Galery({ pizza, wine, comment }) {
     galleryItems = wines.map((wine) => {
       const { id, description, img, dish, price } = wine;
       return (
-        <div className="galery" key={id} onClick={() => addToCart(wine)}>
+        <div className="galery" key={id}>
           <img src={img} alt={description} />
           <div className="text-container">
             <div className="product-and-price-container">
