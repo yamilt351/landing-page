@@ -7,6 +7,7 @@ import Modal from '../Modal/modal';
 function Navbar() {
   const [showlinks, setShowLinks] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -14,6 +15,13 @@ function Navbar() {
 
   const handleModalClose = () => {
     setIsModalOpen(false);
+  };
+  const handleCartModalOpen = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const handleCartModalClose = () => {
+    setIsCartModalOpen(false);
   };
 
   return (
@@ -43,19 +51,43 @@ function Navbar() {
                 {link === '#Auth' ? (
                   <a
                     href="#Auth"
-                    onClick={!isModalOpen ? handleModalOpen : handleModalClose}
+                    onClick={
+                      isModalOpen || isCartModalOpen
+                        ? () => {
+                            handleModalClose();
+                            handleCartModalClose();
+                          }
+                        : handleModalOpen
+                    }
                   >
                     {name}
                   </a>
                 ) : link === '#Cart' ? (
                   <a
                     href="#Cart"
-                    onClick={!isModalOpen ? handleModalOpen : handleModalClose}
+                    onClick={
+                      isCartModalOpen || isModalOpen
+                        ? () => {
+                            handleCartModalClose();
+                            handleModalClose();
+                          }
+                        : handleCartModalOpen
+                    }
                   >
                     {name}
                   </a>
                 ) : (
-                  <a href={link} onClick={isModalOpen ? handleModalClose : ''}>
+                  <a
+                    href={link}
+                    onClick={
+                      isCartModalOpen || isModalOpen
+                        ? () => {
+                            handleCartModalClose();
+                            handleModalClose();
+                          }
+                        : ''
+                    }
+                  >
                     {name}
                   </a>
                 )}
@@ -63,7 +95,12 @@ function Navbar() {
             );
           })}
         </ul>
-        <Modal isOpen={isModalOpen} onClose={handleModalClose} />
+        <Modal
+          isOpen={isModalOpen}
+          onClose={handleModalClose}
+          isCartOpen={isCartModalOpen}
+          isCartClose={handleCartModalClose}
+        />
       </div>
     </nav>
   );

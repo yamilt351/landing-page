@@ -3,15 +3,15 @@ import ShoppingCart from './cartModal';
 import LoginModal from './loginModal';
 import './modal.css';
 
-function Modal({ isOpen, onClose, isCartOpen }) {
-  if (!isOpen) return null;
+function Modal({ isOpen, onClose, isCartOpen, isCartClose }) {
+  if (!isOpen && !isCartOpen) return null;
 
   return (
     <div className="modal-overlay">
-      {isCartOpen ? (
-        <ShoppingCart onCartClose={onClose} />
-      ) : (
+      {isOpen ? (
         <LoginModal onClose={onClose} />
+      ) : (
+        <ShoppingCart onCartClose={isCartClose} />
       )}
     </div>
   );
