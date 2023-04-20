@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './galery.css';
 import { wines, food } from './data';
 import Comments from '../Comments/comments';
 import { FaPizzaSlice, FaWineGlass } from 'react-icons/fa';
 
+
 function Galery({ pizza, wine, comment }) {
+  const [cartProducts, setCartProducts] = useState([]);
+
+  const addToCart = (product) => {
+    setCartProducts([...cartProducts, product]);
+  };
+
   let galleryItems = null;
 
   if (pizza) {
     galleryItems = food.map((foods) => {
       const { id, description, img, dish, price } = foods;
       return (
-        <div className="galery" key={id}>
+        <div className="galery" key={id} onClick={() => addToCart(foods)}>
           <img src={img} alt={description} />
           <div className="text-container">
             <div className="product-and-price-container">
@@ -29,7 +36,7 @@ function Galery({ pizza, wine, comment }) {
     galleryItems = wines.map((wine) => {
       const { id, description, img, dish, price } = wine;
       return (
-        <div className="galery" key={id}>
+        <div className="galery" key={id} onClick={() => addToCart(wine)}>
           <img src={img} alt={description} />
           <div className="text-container">
             <div className="product-and-price-container">

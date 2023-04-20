@@ -3,10 +3,12 @@ import './navbar.css';
 import data from './data';
 import { MdMenu } from 'react-icons/md';
 import Modal from '../Modal/modal';
+import ShoppingCart from '../Cart/cart';
 
 function Navbar() {
   const [showlinks, setShowLinks] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -14,6 +16,14 @@ function Navbar() {
 
   const handleModalClose = () => {
     setIsModalOpen(false);
+  };
+
+  const handleCartOpen = () => {
+    setIsCartOpen(true);
+  };
+
+  const handleCartClose = () => {
+    setIsCartOpen(false);
   };
 
   return (
@@ -41,17 +51,26 @@ function Navbar() {
             return (
               <li className="navbarElement" key={id}>
                 {link === '#Auth' ? (
-                  <a href="#" onClick={handleModalOpen}>
+                  <a href="#Auth" onClick={handleModalOpen}>
+                    {name}
+                  </a>
+                ) : link === '#Cart' ? (
+                  <a href="#Cart" onClick={handleCartOpen && handleModalClose}>
                     {name}
                   </a>
                 ) : (
-                  <a href={link}>{name}</a>
+                  <a href={link} onClick={handleModalClose}>
+                    {name}
+                  </a>
                 )}
               </li>
             );
           })}
         </ul>
         <Modal isOpen={isModalOpen} onClose={handleModalClose} />
+        <Modal isCartOpen={isCartOpen} onCartClose={handleCartClose}>
+          <ShoppingCart />
+        </Modal>
       </div>
     </nav>
   );
