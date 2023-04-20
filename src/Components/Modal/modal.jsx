@@ -3,7 +3,7 @@ import ShoppingCart from './cartModal';
 import LoginModal from './loginModal';
 import './modal.css';
 
-function Modal({ isOpen, onClose, isCartOpen, isCartClose }) {
+function Modal({ isOpen, onClose, isCartOpen, onCartClose }) {
   if (!isOpen && !isCartOpen) return null;
 
   return (
@@ -11,7 +11,7 @@ function Modal({ isOpen, onClose, isCartOpen, isCartClose }) {
       {isOpen ? (
         <LoginModal onClose={onClose} />
       ) : (
-        <ShoppingCart onCartClose={isCartClose} />
+        <ShoppingCart onCartClose={onCartClose} />
       )}
     </div>
   );

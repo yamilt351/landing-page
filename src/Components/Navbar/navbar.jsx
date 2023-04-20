@@ -12,14 +12,12 @@ function Navbar() {
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
-
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
   const handleCartModalOpen = () => {
     setIsCartModalOpen(true);
   };
-
   const handleCartModalClose = () => {
     setIsCartModalOpen(false);
   };
@@ -85,7 +83,7 @@ function Navbar() {
                             handleCartModalClose();
                             handleModalClose();
                           }
-                        : ''
+                        : null
                     }
                   >
                     {name}
@@ -99,7 +97,7 @@ function Navbar() {
           isOpen={isModalOpen}
           onClose={handleModalClose}
           isCartOpen={isCartModalOpen}
-          isCartClose={handleCartModalClose}
+          onCartClose={handleCartModalClose}
         />
       </div>
     </nav>

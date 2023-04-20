@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './cart.css'
+import './cart.css';
 function ShoppingCart({ onCartClose }) {
   const [products, setProducts] = useState([]);
 
@@ -19,18 +19,21 @@ function ShoppingCart({ onCartClose }) {
         <h2 className="cart-title">Your Cart</h2>
       </div>
       <div className="cart-items-container">
-        <ul className="cart-links">
-          {products.map((product) => (
-            <li key={product.id}>
-              <p>{product.dish}</p>
-              <p>{product.price}</p>
-              <button onClick={() => removeProduct(product.id)}>Remove</button>
-            </li>
-          ))}
-        </ul>
+        <div className="cart-items">
+          <ul className="cart-links">
+            {products.map((product) => (
+              <li key={product.id}>
+                <p>{product.dish}</p>
+                <p>{product.price}</p>
+                <button onClick={() => removeProduct(product.id)}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p>Total: {total}</p>
       </div>
-
-      <p>Total: {total}</p>
     </div>
   );
 }

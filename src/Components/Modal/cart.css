@@ -1,11 +1,25 @@
-.cart-section {
+.cart-items-container {
   height: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
+}
+
+.cart-items {
+  margin-bottom: 1rem;
+}
+
+.cart-total {
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 .cart-title {
-  color: var(--c-s);
   font-size: 2rem;
+}
+.cart-title,
+.cart-links,
+.cart-links li,
+.cart-items-container p {
+  color: var(--c-s);
 }
