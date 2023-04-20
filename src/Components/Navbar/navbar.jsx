@@ -55,10 +55,7 @@ function Navbar() {
                     {name}
                   </a>
                 ) : (
-                  <a
-                    href={link}
-                    onClick={!isModalOpen ? handleModalOpen : handleModalClose}
-                  >
+                  <a href={link} onClick={isModalOpen ? handleModalClose : ''}>
                     {name}
                   </a>
                 )}
