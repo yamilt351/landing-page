@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-function LoginModal({onClose}) {
- const [signin, setSignin] = useState(true);
+function LoginModal({ onClose }) {
+  const [signin, setSignin] = useState(true);
 
   return (
     <div>
