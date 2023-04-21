@@ -43,7 +43,7 @@ footer {
 }
 .social-media a {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   color: var(--c-q);
 }
 .social-media a:hover {

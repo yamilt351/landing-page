@@ -6,7 +6,7 @@ import Modal from '../Modal/modal';
 import { CartContext } from '../Context/cartContext';
 import { BsCart, BsCartFill } from 'react-icons/bs';
 
-function Navbar() {
+function Navbar({activeSection}) {
   const [showlinks, setShowLinks] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);

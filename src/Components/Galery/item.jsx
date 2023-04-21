@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaPizzaSlice, FaWineGlass } from 'react-icons/fa';
 function Item({
   id,
   description,
@@ -9,6 +8,7 @@ function Item({
   onAddToCart,
   onRemoveFromCart,
   quantity,
+  icon,
 }) {
   return (
     <div className="galery" key={id}>
@@ -20,7 +20,7 @@ function Item({
       <div className="text-container">
         <div className="product-and-price-container">
           <h3 className="food">
-            <FaPizzaSlice /> {dish}
+            {icon} {dish}
           </h3>
           <h3 className="food">${price}</h3>
         </div>

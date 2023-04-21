@@ -7,12 +7,19 @@ import Navbar from './Components/Navbar/navbar';
 import Product from './Components/Product/product';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      activeSection: '',
+    };
+  }
   componentDidMount() {
     if (window.location.hash) {
       const id = window.location.hash.substring(1);
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView();
+        this.setState({ activeSection: id });
       }
     }
 
@@ -24,6 +31,7 @@ class App extends Component {
           const id = section.getAttribute('id');
           if (id !== window.location.hash.substring(1)) {
             window.history.pushState(null, null, `#${id}`);
+            this.setState({ activeSection: id });
           }
           break;
         }
@@ -39,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <ShoppingCartProvider>
-          <Navbar />
+          <Navbar activeSection={this.state.activeSection} />
           <Menu />
           <Product />
           <About />
