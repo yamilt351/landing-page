@@ -8,7 +8,7 @@ import { CartContext } from '../Context/cartContext.jsx';
 function Galery({ pizza, wine, comment }) {
   const [cart, setCart] = useContext(CartContext);
 
-  const addToCart = (id, price,dish) => {
+  const addToCart = (id, price, dish) => {
     setCart((currItems) => {
       const isItemsFound = currItems.find((item) => item.id === id);
       if (isItemsFound) {
@@ -20,7 +20,7 @@ function Galery({ pizza, wine, comment }) {
           }
         });
       } else {
-        return [...currItems, { id, quantity: 1, price,dish }];
+        return [...currItems, { id, quantity: 1, price, dish }];
       }
     });
   };
@@ -52,11 +52,14 @@ function Galery({ pizza, wine, comment }) {
   if (pizza) {
     galleryItems = food.map((foods) => {
       const { id, description, img, dish, price } = foods;
-
       const quantityPerItem = getQuantityById(id);
       return (
         <div className="galery" key={id}>
-          <img src={img} alt={description} />
+          <img
+            src={img}
+            alt={description}
+            onClick={() => addToCart(id, price, dish)}
+          />
           <div className="text-container">
             <div className="product-and-price-container">
               <h3 className="food">
@@ -65,7 +68,7 @@ function Galery({ pizza, wine, comment }) {
               <h3 className="food">${price}</h3>
             </div>
             <p className="food-description">{description}</p>
-            <button onClick={() => addToCart(id, price,dish)}>
+            <button onClick={() => addToCart(id, price, dish)}>
               +{quantityPerItem}
             </button>
             <button onClick={() => removeItem(id)}>-</button>
@@ -77,10 +80,13 @@ function Galery({ pizza, wine, comment }) {
     galleryItems = wines.map((wine) => {
       const { id, description, img, dish, price } = wine;
       const quantityPerItem = getQuantityById(id);
-
       return (
         <div className="galery" key={id}>
-          <img src={img} alt={description} />
+          <img
+            src={img}
+            alt={description}
+            onClick={() => addToCart(id, price, dish)}
+          />
           <div className="text-container">
             <div className="product-and-price-container">
               <h3 className="food">
@@ -90,7 +96,7 @@ function Galery({ pizza, wine, comment }) {
               <h3 className="food">${price}</h3>
             </div>
             <p className="food-description">{description}</p>
-            <button onClick={() => addToCart(id, price)}>
+            <button onClick={() => addToCart(id, price, dish)}>
               +{quantityPerItem}
             </button>
             <button onClick={() => removeItem(id)}>-</button>

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../Context/cartContext.jsx';
+import { ImBin2 } from 'react-icons/im';
 
 import './cart.css';
 
@@ -14,6 +15,11 @@ function ShoppingCart({ onCartClose }) {
     (acc, curr) => acc + curr.quantity * curr.price,
     0,
   );
+  const removeItem = (id) => {
+    setCart((currItems) => {
+      return currItems.filter((item) => item.id !== id);
+    });
+  };
 
   return (
     <div className="cart-section">
@@ -30,14 +36,19 @@ function ShoppingCart({ onCartClose }) {
             {cart.map((item) => {
               console.log(item);
               return (
-                <li key={item.id}>
-                  {item.dish}={item.quantity}
+                <li key={item.id} className="item-list">
+                  <span className="item-name">{item.dish}</span>
+                  <span className="item-separator">:.......</span>
+                  <span className="item-quantity">{item.quantity}</span>
+                  <span className="item-delete">
+                    <ImBin2 onClick={() => removeItem(item.id)}>Remove</ImBin2>
+                  </span>
                 </li>
               );
             })}
-            <div>Total: ${totalPrice}</div>
-            <button onClick={() => console.log(cart)}>Checkout</button>
           </ul>
+          <div className='total-price'>Total: ${totalPrice}</div>
+          <button onClick={() => console.log(cart)}>Checkout</button>
         </div>
       </div>
     </div>

@@ -122,7 +122,7 @@ export const food = [
     description:
       ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: piz,
-    price: '$210',
+    price: 210,
   },
   {
     id: 70,
