@@ -41,7 +41,7 @@
   font-size: 1.5rem;
   display: flex;
   color: var(--c-m);
-  background-color:var(--c-s);
+  background-color: var(--c-s);
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -51,6 +51,13 @@
 .auth-button {
   width: 100%;
 }
-.hide{
-display: none;
+.hide {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+ .modal-overlay {
+
+  width: 90%;
+
+}
 }

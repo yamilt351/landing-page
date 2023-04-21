@@ -19,7 +19,7 @@
   margin: auto;
   padding: 1.2em;
   max-width: 1200px;
-width: 100%;
+  width: 100%;
 }
 .navbar-list {
   justify-content: center;
@@ -69,19 +69,21 @@ width: 100%;
     font-size: 1rem;
   }
   .navbar {
-    position: absolute;
-    z-index: 2;
+    position: fixed;
+    z-index: 10;
     width: 100%;
     justify-content: center;
-    padding: 2.3rem 0rem;
+    padding: 1rem 0rem;
   }
-  .navbar-list {
+  .navbar-container-elements {
     display: flex;
-    height: 0;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     line-height: 3rem;
-    justify-content: center;
+  }
+  .navbar-list {
+    height: 0;
+    flex-direction: column;
     overflow: hidden;
     transition: ease-in-out 0.3s;
   }
@@ -100,5 +102,17 @@ width: 100%;
   }
   .show-container {
     height: 100%;
+  }
+  .show-in-navbar {
+    z-index: 10;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    color: white;
+    top: 0;
+    right: 0;
+  }
+  .show-in-navbar svg {
+    font-size: 2rem;
   }
 }

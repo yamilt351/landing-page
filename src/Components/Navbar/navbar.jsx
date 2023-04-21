@@ -4,6 +4,7 @@ import data from './data';
 import { MdMenu } from 'react-icons/md';
 import Modal from '../Modal/modal';
 import { CartContext } from '../Context/cartContext';
+import { BsCart, BsCartFill } from 'react-icons/bs';
 
 function Navbar() {
   const [showlinks, setShowLinks] = useState(false);
@@ -40,6 +41,31 @@ function Navbar() {
           >
             <MdMenu />
           </button>
+          <span>
+            {' '}
+            <a
+              href="#Cart"
+              onClick={
+                isCartModalOpen || isModalOpen
+                  ? () => {
+                      handleCartModalClose();
+                      handleModalClose();
+                    }
+                  : handleCartModalOpen
+              }
+            >
+              {quantity > 0 ? (
+                <span>
+                  <BsCartFill />
+                  {quantity}
+                </span>
+              ) : (
+                <span>
+                  <BsCart />
+                </span>
+              )}
+            </a>
+          </span>
         </div>
         <div className="app-logo">
           <img src="" alt="app_logo_here" />
