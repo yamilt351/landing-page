@@ -34,6 +34,7 @@ button {
   padding: 1rem;
   color: var(--c-m);
   background-color: var(--c-s);
+  font-weight: bold;
 }
 button:hover {
   border: 0.1rem solid var(--c-s);

@@ -4,6 +4,7 @@ import { wines, food } from './data';
 import Comments from '../Comments/comments';
 import { FaPizzaSlice, FaWineGlass } from 'react-icons/fa';
 import { CartContext } from '../Context/cartContext.jsx';
+import Item from './item';
 
 function Galery({ pizza, wine, comment }) {
   const [cart, setCart] = useContext(CartContext);
@@ -54,26 +55,17 @@ function Galery({ pizza, wine, comment }) {
       const { id, description, img, dish, price } = foods;
       const quantityPerItem = getQuantityById(id);
       return (
-        <div className="galery" key={id}>
-          <img
-            src={img}
-            alt={description}
-            onClick={() => addToCart(id, price, dish)}
-          />
-          <div className="text-container">
-            <div className="product-and-price-container">
-              <h3 className="food">
-                <FaPizzaSlice /> {dish}
-              </h3>
-              <h3 className="food">${price}</h3>
-            </div>
-            <p className="food-description">{description}</p>
-            <button onClick={() => addToCart(id, price, dish)}>
-              +{quantityPerItem}
-            </button>
-            <button onClick={() => removeItem(id)}>-</button>
-          </div>
-        </div>
+        <Item
+          id={id}
+          description={description}
+          img={img}
+          dish={dish}
+          price={price}
+          onAddToCart={addToCart}
+          onRemoveFromCart={removeItem}
+          quantity={quantityPerItem}
+          icon={<FaPizzaSlice />}
+        />
       );
     });
   } else if (wine) {
@@ -81,27 +73,17 @@ function Galery({ pizza, wine, comment }) {
       const { id, description, img, dish, price } = wine;
       const quantityPerItem = getQuantityById(id);
       return (
-        <div className="galery" key={id}>
-          <img
-            src={img}
-            alt={description}
-            onClick={() => addToCart(id, price, dish)}
-          />
-          <div className="text-container">
-            <div className="product-and-price-container">
-              <h3 className="food">
-                <FaWineGlass />
-                {dish}
-              </h3>
-              <h3 className="food">${price}</h3>
-            </div>
-            <p className="food-description">{description}</p>
-            <button onClick={() => addToCart(id, price, dish)}>
-              +{quantityPerItem}
-            </button>
-            <button onClick={() => removeItem(id)}>-</button>
-          </div>
-        </div>
+        <Item
+          id={id}
+          description={description}
+          img={img}
+          dish={dish}
+          price={price}
+          onAddToCart={addToCart}
+          onRemoveFromCart={removeItem}
+          quantity={quantityPerItem}
+          icon={<FaWineGlass />}
+        />
       );
     });
   } else if (comment) {

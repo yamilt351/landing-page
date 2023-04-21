@@ -10,9 +10,7 @@ function Navbar() {
   const [showlinks, setShowLinks] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
-
   const [cart, setCart] = useContext(CartContext);
-
   const quantity = cart.reduce((acc, curr) => {
     return acc + curr.quantity;
   }, 0);

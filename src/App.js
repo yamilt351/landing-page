@@ -7,6 +7,34 @@ import Navbar from './Components/Navbar/navbar';
 import Product from './Components/Product/product';
 
 class App extends Component {
+  componentDidMount() {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.getBoundingClientRect().top <= window.innerHeight / 2) {
+          const id = section.getAttribute('id');
+          if (id !== window.location.hash.substring(1)) {
+            window.history.pushState(null, null, `#${id}`);
+          }
+          break;
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', handleScroll);
+  }
   render() {
     return (
       <div className="App">

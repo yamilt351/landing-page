@@ -48,6 +48,7 @@
 .text-container {
   max-height: 20rem;
 }
+
 @media screen and (max-width: 800px) {
   .gallery-container {
     display: block;
