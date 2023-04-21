@@ -54,10 +54,21 @@
 .hide {
   display: none;
 }
-@media screen and (max-width: 800px) {
- .modal-overlay {
-
-  width: 90%;
-
+.password-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
+.password-container input {
+  width: 84%;
+}
+.password-icon:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .modal-overlay {
+    width: 90%;
+  }
 }

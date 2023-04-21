@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
 function LoginModal({ onClose }) {
   const [signin, setSignin] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div>
@@ -22,8 +24,19 @@ function LoginModal({ onClose }) {
               className={signin ? 'hide' : ''}
             />
           </label>
-          <label>
-            <input type="password" name="password" placeholder="Password" />
+          <label className='password-container'>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name="password"
+              placeholder="Password"
+            />
+            <div className='password-icon'
+              onClick={() => {
+                setShowPassword(!showPassword);
+              }}
+            >
+              {showPassword ? <AiFillEye /> : <AiFillEyeInvisible />}
+            </div>
           </label>
           <button type="submit" className="auth-button">
             Submit
