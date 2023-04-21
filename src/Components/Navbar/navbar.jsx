@@ -79,8 +79,14 @@ function Navbar() {
                         : handleCartModalOpen
                     }
                   >
-                    {name}
-                    {quantity}
+                    {quantity > 0 ? (
+                      <span>
+                        {name[0]}
+                        {quantity}
+                      </span>
+                    ) : (
+                      <span>{name[1]}</span>
+                    )}
                   </a>
                 ) : (
                   <a

@@ -27,6 +27,14 @@ function ShoppingCart({ onCartClose }) {
         <div className="cart-items">
           <ul className="cart-links">
             <div>Items in cart: {quantity}</div>
+            {cart.map((item) => {
+              console.log(item);
+              return (
+                <li key={item.id}>
+                  {item.dish}={item.quantity}
+                </li>
+              );
+            })}
             <div>Total: ${totalPrice}</div>
             <button onClick={() => console.log(cart)}>Checkout</button>
           </ul>
