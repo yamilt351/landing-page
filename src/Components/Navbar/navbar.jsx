@@ -33,8 +33,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container-elements">
-        <div className="menu-display">
+        <div className="mobile-menu-display">
           <button
+            className="menu-display"
             onClick={() => {
               setShowLinks(!showlinks);
             }}
@@ -44,6 +45,7 @@ function Navbar() {
           <span>
             {' '}
             <a
+              className="mobile-cart"
               href="#Cart"
               onClick={
                 isCartModalOpen || isModalOpen

@@ -58,7 +58,7 @@
 .navbarElement a:hover::after {
   transform: scaleX(1);
 }
-.menu-display {
+.mobile-menu-display {
   display: none;
 }
 @media screen and (max-width: 800px) {
@@ -87,14 +87,17 @@
     overflow: hidden;
     transition: ease-in-out 0.3s;
   }
-  .menu-display {
-    z-index: 3;
+  .mobile-menu-display {
     display: flex;
+  }
+  .menu-display,
+  .mobile-cart {
+    z-index: 3;
     position: absolute;
+  }
+  .menu-display {
     top: -1rem;
     left: 0rem;
-  }
-  .menu-display button {
     background-color: var(--c-m);
     color: var(--c-s);
     border: none;
@@ -103,16 +106,10 @@
   .show-container {
     height: 100%;
   }
-  .show-in-navbar {
-    z-index: 10;
-    display: flex;
-    position: relative;
-    margin-left: auto;
-    color: white;
-    top: 0;
+  .mobile-cart {
+    margin: 0 1rem;
+    top: 0.8rem;
     right: 0;
-  }
-  .show-in-navbar svg {
-    font-size: 2rem;
+    color: var(--c-s);
   }
 }
