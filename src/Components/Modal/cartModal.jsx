@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../Context/cartContext.jsx';
-import { ImBin2 } from 'react-icons/im';
 
 import './cart.css';
+import {BsFillCartDashFill} from 'react-icons/bs';
 
 function ShoppingCart({ onCartClose }) {
   const [cart, setCart] = useContext(CartContext);
@@ -41,7 +41,7 @@ function ShoppingCart({ onCartClose }) {
                   <span className="item-separator">:.......</span>
                   <span className="item-quantity">{item.quantity}</span>
                   <span className="item-delete">
-                    <ImBin2 onClick={() => removeItem(item.id)}>Remove</ImBin2>
+                    <BsFillCartDashFill onClick={() => removeItem(item.id)}>Remove</BsFillCartDashFill>
                   </span>
                 </li>
               );
