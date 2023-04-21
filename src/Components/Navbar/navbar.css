@@ -61,6 +61,11 @@
 .mobile-menu-display {
   display: none;
 }
+@media screen and (width: 810px) {
+  .navbar-list {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (max-width: 800px) {
   .app-logo {
     display: none;
@@ -83,6 +88,8 @@
   }
   .navbar-list {
     height: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
     flex-direction: column;
     overflow: hidden;
     transition: ease-in-out 0.3s;
