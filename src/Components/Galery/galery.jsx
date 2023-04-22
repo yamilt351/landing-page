@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import './galery.css';
 import { wines, food } from './data';
 import Comments from '../Comments/comments';
-import { FaPizzaSlice, FaWineGlass } from 'react-icons/fa';
 import { CartContext } from '../Context/cartContext.jsx';
-import Item from './item';
+
+import Pagination from './pagination';
 
 function Galery({ pizza, wine, comment }) {
   const [cart, setCart] = useContext(CartContext);
@@ -57,46 +57,13 @@ function Galery({ pizza, wine, comment }) {
     return foundItem ? foundItem.quantity : 0;
   };
 
-  let galleryItems = null;
+  const itemsPerPage = 9;
 
+  let items;
   if (pizza) {
-    galleryItems = food.map((foods) => {
-      const { id, description, img, dish, price } = foods;
-      const quantityPerItem = getQuantityById(id);
-      return (
-        <Item
-          key={id}
-          id={id}
-          description={description}
-          img={img}
-          dish={dish}
-          price={price}
-          onAddToCart={addToCart}
-          onRemoveFromCart={removeItem}
-          quantity={quantityPerItem}
-          icon={<FaPizzaSlice />}
-        />
-      );
-    });
+    items = food;
   } else if (wine) {
-    galleryItems = wines.map((wine) => {
-      const { id, description, img, dish, price } = wine;
-      const quantityPerItem = getQuantityById(id);
-      return (
-        <Item
-          key={id}
-          id={id}
-          description={description}
-          img={img}
-          dish={dish}
-          price={price}
-          onAddToCart={addToCart}
-          onRemoveFromCart={removeItem}
-          quantity={quantityPerItem}
-          icon={<FaWineGlass />}
-        />
-      );
-    });
+    items = wines;
   } else if (comment) {
     return (
       <div className="gallery-container">
@@ -104,7 +71,17 @@ function Galery({ pizza, wine, comment }) {
       </div>
     );
   }
-
-  return <div className="gallery-container">{galleryItems}</div>;
+  return (
+    <div>
+      <Pagination
+        items={items}
+        itemsPerPage={itemsPerPage}
+        addToCart={addToCart}
+        removeItem={removeItem}
+        getQuantityById={getQuantityById}
+        pizza={pizza}
+      />
+    </div>
+  );
 }
 export default Galery;
