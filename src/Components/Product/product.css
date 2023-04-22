@@ -1,3 +1,4 @@
+
 .title-container {
   display: flex;
   justify-content: center;
@@ -22,7 +23,7 @@
   align-content: center;
   justify-content: center;
   max-width: 1200px;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   margin: auto;
 }
 

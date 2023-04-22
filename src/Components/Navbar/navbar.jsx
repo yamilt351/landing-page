@@ -6,7 +6,7 @@ import Modal from '../Modal/modal';
 import { CartContext } from '../Context/cartContext';
 import { BsCart, BsCartFill } from 'react-icons/bs';
 
-function Navbar({activeSection}) {
+function Navbar({ activeSection }) {
   const [showlinks, setShowLinks] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
@@ -27,9 +27,9 @@ function Navbar({activeSection}) {
   const handleCartModalClose = () => {
     setIsCartModalOpen(false);
   };
-console.log(activeSection + "esta seccion");
+  console.log(activeSection + 'esta seccion');
   return (
-    <nav className="navbar">
+    <nav className={activeSection === 'Home' ? 'navbar' : 'small navbar'}>
       <div className="navbar-container-elements">
         <div className="mobile-menu-display">
           <button

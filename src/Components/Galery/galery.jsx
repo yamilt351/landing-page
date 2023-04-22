@@ -9,6 +9,7 @@ import Item from './item';
 function Galery({ pizza, wine, comment }) {
   const [cart, setCart] = useContext(CartContext);
 
+
   const addToCart = (id, price, dish) => {
     setCart((currItems) => {
       const isItemsFound = currItems.find((item) => item.id === id);

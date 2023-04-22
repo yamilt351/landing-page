@@ -31,10 +31,7 @@ function Product() {
         <h1 className={wines ? 'selected' : ''} onClick={changeStateWines}>
           Wines
         </h1>
-        <h1
-          className={reviews ? 'selected' : ''}
-          onClick={changeStateReviews}
-        >
+        <h1 className={reviews ? 'selected' : ''} onClick={changeStateReviews}>
           Reviews
         </h1>
       </div>

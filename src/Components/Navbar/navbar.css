@@ -12,12 +12,17 @@
   background-color: var(--c-m);
   border: 2px solid var(--c-m);
   border-bottom: 1px solid var(--c-s);
+  padding: 1.3rem;
+transition: 1s ease-in-out;
+}
+.small {
+  transition: 1s ease-in-out;
+  padding: 0.4rem;
 }
 .navbar-container-elements {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  padding: 1.2em;
   max-width: 1200px;
   width: 100%;
 }
@@ -78,7 +83,7 @@
     z-index: 10;
     width: 100%;
     justify-content: center;
-    padding: 1rem 0rem;
+    padding: 2.4rem 0rem;
   }
   .navbar-container-elements {
     display: flex;
