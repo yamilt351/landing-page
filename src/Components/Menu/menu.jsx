@@ -17,7 +17,7 @@ function Menu() {
   return (
     <section className="section" id="Home">
       <div className="section-container">
-        <div className="text-container">
+        <div className="text-menu-container">
           <h1>Lorem, ipsum.</h1>
           <p>{currentText}</p>
           <button> Lorem, ipsum dolor.</button>

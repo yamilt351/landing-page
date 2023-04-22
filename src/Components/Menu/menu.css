@@ -26,24 +26,25 @@
   border-radius: 20rem 0 0 20rem;
   border-left: 0.5rem solid var(--c-s);
 }
-.text-container {
+.text-menu-container {
+ padding: 1rem;
   width: 60%;
 }
-.text-container h1 {
+.text-menu-container h1 {
   color: var(--c-s);
   font-size: 3rem;
   font-family: var(--f-b), serif;
 }
-.text-container p {
+.text-menu-container p {
   margin-top: 1rem;
   font-family: var(--f-a), serif;
   color: var(--c-q);
 }
 
 @media screen and (max-width: 800px) {
-.text-container {
-  width: 90%;
-}
+  .text-menu-container {
+    width: 90%;
+  }
   .section-container {
     display: flex;
     flex-direction: column-reverse;
@@ -61,7 +62,7 @@
     border-left: 0;
     border-bottom: 0.3rem solid var(--c-s);
   }
-  .text-container {
+  .text-menu-container {
     margin-top: 3rem;
   }
 }
