@@ -32,7 +32,6 @@ function Galery({ pizza, wine, comment }) {
         return [...currItems, { id, quantity: 1, price, dish }];
       }
     });
-console.log("hola");
     animation();
   };
 

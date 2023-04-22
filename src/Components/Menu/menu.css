@@ -26,6 +26,9 @@
   border-radius: 20rem 0 0 20rem;
   border-left: 0.5rem solid var(--c-s);
 }
+.text-container {
+  width: 60%;
+}
 .text-container h1 {
   color: var(--c-s);
   font-size: 3rem;
@@ -38,6 +41,9 @@
 }
 
 @media screen and (max-width: 800px) {
+.text-container {
+  width: 90%;
+}
   .section-container {
     display: flex;
     flex-direction: column-reverse;
