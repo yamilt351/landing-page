@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Item from './item';
+import './pagination.css';
 import { FaPizzaSlice, FaWineGlass } from 'react-icons/fa';
-function Pagination({ items, itemsPerPage, addToCart, removeItem,getQuantityById,pizza}) {
+function Pagination({
+  items,
+  itemsPerPage,
+  addToCart,
+  removeItem,
+  getQuantityById,
+  pizza,
+}) {
   const [currentPage, setCurrentPage] = useState(1);
   const totalItems = items.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -13,6 +21,10 @@ function Pagination({ items, itemsPerPage, addToCart, removeItem,getQuantityById
     const endIndex = startIndex + itemsPerPage;
     return items.slice(startIndex, endIndex);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [pizza]);
 
   const paginationItems = getCurrentPageItems().map((item) => (
     <Item
@@ -40,8 +52,8 @@ function Pagination({ items, itemsPerPage, addToCart, removeItem,getQuantityById
 
   return (
     <>
-      <div className="gallery-container">{paginationItems}</div>
       <ul className="pagination">{paginationLinks}</ul>
+      <div className="gallery-container">{paginationItems}</div>
     </>
   );
 }

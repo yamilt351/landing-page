@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  margin: 0 1.2rem;
+  flex-direction: row;
+  font-weight: bold;
+  color: var(--c-s);
+}
+.pagination li{
+margin: 0 1rem;
+}
+
+.pagination li:hover {
+cursor: pointer;
+
+}
