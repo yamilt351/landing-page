@@ -116,6 +116,7 @@ function Navbar({ activeSection }) {
                   </a>
                 ) : (
                   <a
+                    className={activeSection ==={name} ? 'active' : ''}
                     href={link}
                     onClick={
                       isCartModalOpen || isModalOpen

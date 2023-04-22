@@ -17,7 +17,7 @@ transition: 1s ease-in-out;
 }
 .small {
   transition: 1s ease-in-out;
-  padding: 0.4rem;
+  padding: 0.8rem;
 }
 .navbar-container-elements {
   display: flex;
@@ -41,6 +41,7 @@ transition: 1s ease-in-out;
   text-decoration: none;
   position: relative;
 }
+
 .navbarElement a::before,
 .navbarElement a::after {
   content: '';

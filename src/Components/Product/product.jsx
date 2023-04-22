@@ -23,17 +23,18 @@ function Product() {
   };
 
   return (
-    <section className="product-section" id="Product">
+    <section className="product-section"id="Product">
+      <h1>Menu</h1>
       <div className="title-container">
-        <h1 className={pizza ? 'selected' : ''} onClick={changeStatePizza}>
+        <h2 className={pizza ? 'selected' : ''} onClick={changeStatePizza}>
           Pizzas
-        </h1>
-        <h1 className={wines ? 'selected' : ''} onClick={changeStateWines}>
+        </h2>
+        <h2 className={wines ? 'selected' : ''} onClick={changeStateWines}>
           Wines
-        </h1>
-        <h1 className={reviews ? 'selected' : ''} onClick={changeStateReviews}>
+        </h2>
+        <h2 className={reviews ? 'selected' : ''} onClick={changeStateReviews}>
           Reviews
-        </h1>
+        </h2>
       </div>
       <div className="product-container">
         <div className="gallery-container">
