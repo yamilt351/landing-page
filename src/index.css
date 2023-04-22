@@ -20,6 +20,7 @@
   --c-t: #111111;
   /* white */
   --c-q: #fff;
+  --max-font-size: 1.3rem;
 }
 a {
   text-decoration: none;

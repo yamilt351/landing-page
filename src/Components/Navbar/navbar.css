@@ -13,7 +13,7 @@
   border: 2px solid var(--c-m);
   border-bottom: 1px solid var(--c-s);
   padding: 1.3rem;
-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .small {
   transition: 1s ease-in-out;
@@ -67,6 +67,12 @@ transition: 1s ease-in-out;
 .mobile-menu-display {
   display: none;
 }
+.cart.cart-animation {
+  box-shadow: 1px 3px 0px -1px rgba(255, 222, 63, 0.75);
+  -webkit-box-shadow: 1px 3px 0px -1px rgba(255, 222, 63, 0.75);
+  -moz-box-shadow: 1px 8px 1px -1px rgba(255, 222, 63, 0.75);
+}
+
 @media screen and (width: 810px) {
   .navbar-list {
     font-size: 1.2rem;

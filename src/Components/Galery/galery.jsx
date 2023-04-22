@@ -9,6 +9,13 @@ import Item from './item';
 function Galery({ pizza, wine, comment }) {
   const [cart, setCart] = useContext(CartContext);
 
+  const animation = () => {
+    const cart = document.querySelector('.cart');
+    cart.classList.add('cart-animation');
+    setTimeout(() => {
+      cart.classList.remove('cart-animation');
+    }, 1000);
+  };
 
   const addToCart = (id, price, dish) => {
     setCart((currItems) => {
@@ -25,6 +32,8 @@ function Galery({ pizza, wine, comment }) {
         return [...currItems, { id, quantity: 1, price, dish }];
       }
     });
+console.log("hola");
+    animation();
   };
 
   const removeItem = (id) => {
