@@ -27,7 +27,7 @@ function Navbar({activeSection}) {
   const handleCartModalClose = () => {
     setIsCartModalOpen(false);
   };
-
+console.log(activeSection + "esta seccion");
   return (
     <nav className="navbar">
       <div className="navbar-container-elements">

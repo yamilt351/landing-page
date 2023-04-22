@@ -56,6 +56,7 @@ function Galery({ pizza, wine, comment }) {
       const quantityPerItem = getQuantityById(id);
       return (
         <Item
+          key={id}
           id={id}
           description={description}
           img={img}
@@ -74,6 +75,7 @@ function Galery({ pizza, wine, comment }) {
       const quantityPerItem = getQuantityById(id);
       return (
         <Item
+          key={id}
           id={id}
           description={description}
           img={img}
