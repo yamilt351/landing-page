@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/landing-page/static/css/main.60ededc3.css",
-    "main.js": "/landing-page/static/js/main.cdc3dd17.js",
+    "main.css": "/landing-page/static/css/main.7bbe4472.css",
+    "main.js": "/landing-page/static/js/main.6f33fb7e.js",
     "static/media/pizza.jpg": "/landing-page/static/media/pizza.a6b5e62104914ee86177.jpg",
     "static/media/red-wine-is-poured-into-a-glass-from-a-bottle--light-background--1153158143-jpg": "/landing-page/static/media/red-wine-is-poured-into-a-glass-from-a-bottle--light-background--1153158143-98320451802c485cb6d7b5437c7fd60a.4fb5d7c12ec0950dbb05.jpg",
     "static/media/Pepperoni_1.jpg": "/landing-page/static/media/Pepperoni_1.b0fe7443cdbf26cee44c.jpg",
     "static/media/pizza.webp": "/landing-page/static/media/pizza.5e41ff9eef8d75eb5455.webp",
-    "static/media/Poses-de-Fotos-de-Perfil-19-3209589490.jpeg": "/landing-page/static/media/Poses-de-Fotos-de-Perfil-19-3209589490.4a7cbb12ca9742909e8d.jpeg",
     "static/media/vino-argentino3.jpg": "/landing-page/static/media/vino-argentino3.bcddae66646cfcfe92e2.jpg",
     "index.html": "/landing-page/index.html",
-    "main.60ededc3.css.map": "/landing-page/static/css/main.60ededc3.css.map",
-    "main.cdc3dd17.js.map": "/landing-page/static/js/main.cdc3dd17.js.map"
+    "main.7bbe4472.css.map": "/landing-page/static/css/main.7bbe4472.css.map",
+    "main.6f33fb7e.js.map": "/landing-page/static/js/main.6f33fb7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.60ededc3.css",
-    "static/js/main.cdc3dd17.js"
+    "static/css/main.7bbe4472.css",
+    "static/js/main.6f33fb7e.js"
   ]
 }
