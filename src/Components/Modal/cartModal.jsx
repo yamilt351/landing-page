@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../Context/cartContext.jsx';
 
 import './cart.css';
-import {BsFillCartDashFill} from 'react-icons/bs';
+import { BsFillCartDashFill } from 'react-icons/bs';
 
 function ShoppingCart({ onCartClose }) {
+  const [confirmed, setConfirmed] = useState(false);
   const [cart, setCart] = useContext(CartContext);
 
   const quantity = cart.reduce((acc, curr) => {
@@ -20,6 +21,39 @@ function ShoppingCart({ onCartClose }) {
       return currItems.filter((item) => item.id !== id);
     });
   };
+  const handleConfirm = () => {
+    const inputs = document.querySelectorAll('input[required]');
+    const textareas = document.querySelectorAll('textarea[required]');
+
+    let isValid = true;
+
+    inputs.forEach((input) => {
+      if (!input.checkValidity()) {
+        isValid = false;
+      }
+    });
+
+    textareas.forEach((textarea) => {
+      if (!textarea.checkValidity()) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      alert('we recieved your order!');
+      console.log('OK');
+    } else {
+      alert('invalid data');
+    }
+  };
+  const handleCheckOrder = () => {
+    console.log(cart.length);
+    if (cart.length > 0) {
+      setConfirmed(!confirmed);
+    } else {
+      alert('your order is empty');
+    }
+  };
 
   return (
     <div className="cart-section">
@@ -27,28 +61,60 @@ function ShoppingCart({ onCartClose }) {
         X
       </button>
       <div className="cart-title-container">
-        <h2 className="cart-title">Your Cart</h2>
+        <h2 className="cart-title">{confirmed ? 'Address' : 'Your Order'}</h2>
       </div>
       <div className="cart-items-container">
         <div className="cart-items">
-          <ul className="cart-links">
-            <div>Items in cart: {quantity}</div>
+          <ul className={confirmed ? 'cart-link hide' : 'cart-links'}>
+            <div>Items: {quantity}</div>
             {cart.map((item) => {
-              console.log(item);
               return (
                 <li key={item.id} className="item-list">
                   <span className="item-name">{item.dish}</span>
                   <span className="item-separator">:.......</span>
                   <span className="item-quantity">{item.quantity}</span>
                   <span className="item-delete">
-                    <BsFillCartDashFill onClick={() => removeItem(item.id)}>Remove</BsFillCartDashFill>
+                    <BsFillCartDashFill onClick={() => removeItem(item.id)}>
+                      Remove
+                    </BsFillCartDashFill>
                   </span>
                 </li>
               );
             })}
           </ul>
-          <div className='total-price'>Total: ${totalPrice}</div>
-          <button onClick={() => console.log(cart)}>Checkout</button>
+          <div className={confirmed ? 'user-data-form' : 'hide'}>
+            <label htmlFor="">Name *</label>
+            <input type="text" placeholder="Name" name="name" required />
+            <label htmlFor="">Phone / Mobile *</label>
+            <input
+              type="tel"
+              placeholder="Phone / Mobile"
+              name="phone"
+              required
+            />
+            <label htmlFor="">Address *</label>
+            <input type="text" placeholder="Address" name="address" required />
+            <label htmlFor="">Annotations *</label>
+            <textarea
+              type="text"
+              placeholder="Annotations"
+              cols={43}
+              rows={10}
+              name="apartment"
+              required
+            />
+          </div>
+
+          <div className="total-price">Total: ${totalPrice}</div>
+          <div className="order-buttons">
+            {' '}
+            <button onClick={handleCheckOrder}>
+              {confirmed ? 'Edit Order' : 'Confirm Order'}
+            </button>
+            <button onClick={handleConfirm} className={confirmed ? '' : 'hide'}>
+              {confirmed ? 'Confirm' : ''}
+            </button>
+          </div>
         </div>
       </div>
     </div>

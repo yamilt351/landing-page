@@ -1,3 +1,4 @@
+.user-data-form,
 .cart-items-container {
   height: 100%;
   display: flex;
@@ -51,4 +52,26 @@
 }
 .item-delete:hover {
   cursor: pointer;
+}
+
+.user-data-form label {
+  font-family: var(--f-b), serif;
+  color: var(--c-s);
+  text-align: left;
+}
+.user-data-form input,
+.user-data-form textarea {
+  color: var(--c-q);
+  font-weight: bold;
+  border: none;
+}
+.user-data-form textarea {
+  border: 1px solid var(--c-s);
+}
+.user-data-form input {
+  border-bottom: 1px solid var(--c-s);
+}
+.user-data-form textarea:focus,
+.user-data-form input:focus {
+  outline: none;
 }
