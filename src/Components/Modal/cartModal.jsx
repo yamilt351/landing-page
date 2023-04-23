@@ -50,8 +50,6 @@ function ShoppingCart({ onCartClose }) {
       setOrder(true);
 
       console.log('OK');
-    } else {
-      alert('invalid data');
     }
   };
 
@@ -59,8 +57,6 @@ function ShoppingCart({ onCartClose }) {
     console.log(cart.length);
     if (cart.length > 0) {
       setConfirmed(!confirmed);
-    } else {
-      alert('your order is empty');
     }
   };
 
@@ -84,7 +80,10 @@ function ShoppingCart({ onCartClose }) {
         <div className="cart-items-container">
           <div className="cart-items">
             <ul className={confirmed ? 'cart-link hide' : 'cart-links'}>
-              <div>Items: {quantity}</div>
+              <h3 className={quantity === 0 ? 'show-alert' : 'hide'}>
+                YOUR ORDER IS EMPTY!
+              </h3>
+
               {cart.map((item) => {
                 return (
                   <li key={item.id} className="item-list">
