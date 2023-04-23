@@ -5,7 +5,7 @@ export const wines = [
     id: 1,
     dish: 'wine',
     description:
-      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
+      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
     price: 1,
   },
@@ -13,7 +13,7 @@ export const wines = [
     id: 2,
     dish: 'wine',
     description:
-      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
+      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
     price: 2,
   },
@@ -29,15 +29,14 @@ export const wines = [
     id: 4,
     dish: 'wine',
     description:
-      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
+      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
     price: 4,
   },
   {
     id: 5,
     dish: 'wine',
-    description:
-      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
+    description: ' Lorem ipsum dolo',
     img: wine,
     price: 5,
   },
@@ -45,7 +44,7 @@ export const wines = [
     id: 6,
     dish: 'wine',
     description:
-      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
+      ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates optio pariatur vel, assumenda porro sit repellendus perferendis laudantium itaque mollitia!',
     img: wine,
     price: 6,
   },

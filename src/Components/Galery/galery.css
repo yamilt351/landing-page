@@ -19,6 +19,9 @@
 .food-description {
   font-family: var(--f-a);
   font-size: 1rem;
+  height: 5.5rem;
+  overflow-x: scroll;
+  max-height: 5.5rem;
 }
 .food {
   font-family: var(--f-b), serif;
