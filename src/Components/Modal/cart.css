@@ -43,7 +43,6 @@
 .item-delete {
   color: var(--c-q);
 }
-
 .item-list span {
   margin: 0 0.3rem;
 }
@@ -53,7 +52,6 @@
 .item-delete:hover {
   cursor: pointer;
 }
-
 .user-data-form label {
   font-family: var(--f-b), serif;
   color: var(--c-s);
@@ -74,4 +72,21 @@
 .user-data-form textarea:focus,
 .user-data-form input:focus {
   outline: none;
+}
+.success-icon-container {
+  font-size: 5rem;
+  color: var(--c-s);
+}
+.success-icon-container:hover {
+  cursor: pointer;
+}
+.order-recieved-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+.red {
+  color:crimson!important
 }

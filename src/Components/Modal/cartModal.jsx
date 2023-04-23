@@ -8,6 +8,7 @@ function ShoppingCart({ onCartClose }) {
   const [confirmed, setConfirmed] = useState(false);
   const [cart, setCart] = useContext(CartContext);
   const [order, setOrder] = useState(false);
+  const [invalid, setInvalid] = useState(false);
 
   const quantity = cart.reduce((acc, curr) => {
     return acc + curr.quantity;
@@ -31,17 +32,23 @@ function ShoppingCart({ onCartClose }) {
     inputs.forEach((input) => {
       if (!input.checkValidity()) {
         isValid = false;
+      } else {
+        setInvalid(true);
       }
     });
 
     textareas.forEach((textarea) => {
       if (!textarea.checkValidity()) {
         isValid = false;
+      } else {
+        setInvalid(true);
       }
     });
 
     if (isValid) {
+      setCart([]);
       setOrder(true);
+
       console.log('OK');
     } else {
       alert('invalid data');
@@ -67,7 +74,7 @@ function ShoppingCart({ onCartClose }) {
           <h2 className="cart-title">Your order has been received</h2>
         </div>
         <div className="success-icon-container">
-          <GiConfirmed />
+          <GiConfirmed onClick={onCartClose} />
         </div>
       </div>
       <div className={order ? 'hide' : 'cart-container'}>
@@ -94,23 +101,31 @@ function ShoppingCart({ onCartClose }) {
               })}
             </ul>
             <div className={confirmed ? 'user-data-form' : 'hide'}>
-              <label htmlFor="">Name *</label>
+              <label htmlFor="" className={invalid ? 'red' : ''}>
+                Name *
+              </label>
               <input type="text" placeholder="Name" name="name" required />
-              <label htmlFor="">Phone / Mobile *</label>
+              <label htmlFor="" className={invalid ? 'red' : ''}>
+                Phone / Mobile *
+              </label>
               <input
                 type="tel"
                 placeholder="Phone / Mobile"
                 name="phone"
                 required
               />
-              <label htmlFor="">Address *</label>
+              <label htmlFor="" className={invalid ? 'red' : ''}>
+                Address *
+              </label>
               <input
                 type="text"
                 placeholder="Address"
                 name="address"
                 required
               />
-              <label htmlFor="">Annotations *</label>
+              <label htmlFor="" className={invalid ? 'red' : ''}>
+                Annotations *
+              </label>
               <textarea
                 type="text"
                 placeholder="Annotations"
