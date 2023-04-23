@@ -19,7 +19,8 @@ function Pagination({
   const getCurrentPageItems = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    return items.slice(startIndex, endIndex);
+    const currentPagesItems = items.slice(startIndex, endIndex);
+    return currentPagesItems;
   };
 
   useEffect(() => {
@@ -40,11 +41,15 @@ function Pagination({
       icon={pizza ? <FaPizzaSlice /> : <FaWineGlass />}
     />
   ));
-
+  console.log(currentPage);
   const paginationLinks = [];
   for (let i = 1; i <= totalPages; i++) {
     paginationLinks.push(
-      <li key={i} onClick={() => handleClick(i)}>
+      <li
+        key={i}
+        onClick={() => handleClick(i)}
+        className={i === currentPage ? 'active' : ''}
+      >
         {i}
       </li>,
     );

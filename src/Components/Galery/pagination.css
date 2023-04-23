@@ -5,12 +5,17 @@
   font-weight: bold;
   color: var(--c-s);
 }
-.pagination li{
-margin: 0 1rem;
+.pagination li {
+  margin: 0 1rem;
 }
 
 .pagination li:hover {
-cursor: pointer;
-text-decoration: 2px solid var(--c-s) underline;
+  cursor: pointer;
+  text-decoration: 2px solid var(--c-s) underline;
+}
 
+.pagination li.active {
+  background-color: var(--c-s);
+  padding: 0 0.4rem;
+  color: var(--c-m);
 }
