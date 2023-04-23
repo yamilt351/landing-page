@@ -1,5 +1,6 @@
 {
   "name": "landing-page",
+  "homepage": "https://yamilt351.github.io/Pizza",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
