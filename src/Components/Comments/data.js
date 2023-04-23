@@ -51,7 +51,7 @@ export const comment = [
     username: 'jesicaasdadasd',
     description:
       ' Lorem ipsum asdadasdasdasdasdasdasdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
-    img: img,
+
     score: 3,
   },
   {
