@@ -72,3 +72,8 @@
     width: 90%;
   }
 }
+.error-message {
+  color: red;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
