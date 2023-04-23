@@ -7,7 +7,7 @@ function Comments() {
   return (
     <div className="content-comments">
       {comment.map((comments) => {
-        const { id, description, username, img, score } = comments;
+        const { id, description, username, score } = comments;
         let stars = [];
         for (let i = 0; i < score; i++) {
           stars.push(<AiFillStar key={i} className="stars" />);
@@ -15,10 +15,8 @@ function Comments() {
         return (
           <div key={id} className="user-comments">
             <div className="name-and-photo-container">
-              <h3>{username}</h3>
               <div className="photo-score-container">
-                <img src={img} alt="user" className="user-photo" />
-                <div>{stars}</div>
+                <h3>{username}</h3> <div>{stars}</div>
               </div>
             </div>
             <div className="comment-container">
