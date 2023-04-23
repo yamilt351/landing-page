@@ -5,15 +5,14 @@ export const comment = [
     id: 1,
     username: 'jesica',
     description:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
+      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  ',
     img: img,
     score: 1,
   },
   {
     id: 2,
-    username: 'jesica',
-    description:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
+    username: 'jadsasdasd',
+    description: ' Lorem ipsum',
     img: img,
     score: 2,
   },
@@ -21,7 +20,7 @@ export const comment = [
     id: 3,
     username: 'jesica',
     description:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
+      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
     score: 3,
   },
@@ -37,7 +36,7 @@ export const comment = [
     id: 6,
     username: 'jesica',
     description:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
+      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  ',
     img: img,
     score: 5,
   },
@@ -45,15 +44,14 @@ export const comment = [
     id: 7,
     username: 'jesica',
     description:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
+      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt?  ',
     img: img,
     score: 5,
   },
   {
     id: 8,
-    username: 'jesica',
-    description:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
+    username: 'jesicaasdadasd',
+    description: ' Lorem ipsum asdadasdasdasdasdasdasdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum deleniti blanditiis in ipsum? Qui ducimus distinctio exercitationem placeat sunt? ',
     img: img,
     score: 3,
   },

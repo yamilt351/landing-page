@@ -5,8 +5,11 @@
 }
 .user-comments {
   width: 30%;
-  margin: auto;
+  margin: 1rem auto;
   padding: 0.3rem;
+  max-height: 10rem;
+  height: 10rem;
+  overflow: scroll;
 }
 
 .name-and-photo-container img {
